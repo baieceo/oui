@@ -1,0 +1,17 @@
+<!--oui/packages/toast/index.wxml-->
+<view class="oui-toast__mask" wx:if="{{ visible && mask }}" bindtap="handleHide"></view>
+<view class="oui-toast" wx:if="{{ visible }}">
+    <block wx:if="{{ type !== 'default' }}">
+        <view class="oui-toast__type">
+            <o-icon size="{{ size }}" class="oui-toast__icon" type="success" wx:if="{{ type === 'success' }}"></o-icon>
+            <o-icon size="{{ size }}" class="oui-toast__icon" type="warning" wx:elif="{{ type === 'warning' }}"></o-icon>
+            <o-icon size="{{ size }}" class="oui-toast__icon" type="delete" wx:elif="{{ type === 'error' }}"></o-icon>
+            <view class="oui-toast__icon oui-toast__loading" wx:elif="{{ type === 'loading' }}"></view>
+        </view>
+    </block>
+    <block wx:else>
+        <i-icon size="{{ size }}" i-class="oui-toast__icon" type="{{ icon }}" wx:if="{{ icon }}"></i-icon>
+        <image class="oui-toast__image" src="{{ image }}" wx:if="{{ image }}" mode="aspectFit"></image>
+    </block>
+    <view class="oui-toast__content" wx:if="{{ content }}">{{ content }}</view>
+</view>

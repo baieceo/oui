@@ -1,0 +1,35 @@
+/* oui/packages/form-item/index.wxss */
+.oui-form-item {
+  display: flex;
+  align-items: center;
+  padding: 28rpx 0;
+  border-top: 1rpx solid #E7E7E7;
+}
+.oui-form-item_first {
+  border-top: none;
+}
+.oui-form-item__header {
+  box-sizing: border-box;
+  padding-right: 1em;
+  font-size: 30rpx;
+  color: #BDBDBD;
+  line-height: 44rpx;
+}
+.oui-form-item__body {
+  position: relative;
+  flex: 1;
+}
+.oui-form-item_picker .oui-form-item__body::after {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  content: '';
+  display: block;
+  width: 12rpx;
+  height: 12rpx;
+  margin-top: -6rpx;
+  border-color: #979797;
+  border-style: solid;
+  border-width: 1rpx 1rpx 0 0;
+  transform: rotate(45deg);
+}

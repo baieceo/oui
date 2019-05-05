@@ -1,0 +1,9 @@
+<!--oui/packages/spin/index.wxml-->
+<view class="oui-spin {{ fix ? 'oui-spin_fix' : '' }}">
+  <view class="oui-spin__body">
+    <view class="oui-spin__loading"></view>
+    <view class="oui-spin__content">
+      <slot></slot>
+    </view>
+  </view>
+</view>

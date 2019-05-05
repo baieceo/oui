@@ -1,0 +1,66 @@
+/* oui/packages/table/index.wxss */
+.oui-table {
+  width: 100%;
+  border:1px solid #D1D3D5;
+  overflow: hidden;
+}
+.oui-table__tr {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.oui-table__th, .oui-table__td {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  white-space: normal;
+  word-break: break-all;
+}
+.oui-table__cell {
+  word-wrap: break-word;
+}
+.oui-table__cell_ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+.oui-table__th {
+  position: relative;
+  background-color: #EFEFEF;
+  font-weight: 400;
+  font-size: 24rpx;
+  padding: 10rpx 20rpx;
+  color: #828282;
+  line-height: 40rpx;
+  margin-right: 1px;
+}
+.oui-table__th:last-of-type {
+  margin-right: 0;
+}
+.oui-table__td {
+  font-size: 24rpx;
+  line-height: 40rpx;
+  color: #828282;
+  padding: 20rpx 20rpx;
+  margin-right: 1px;
+}
+.oui-table__td:last-of-type {
+  margin-right: 0;
+}
+.oui-table__tbody .oui-table__tr {
+  border-bottom: 1px solid #D1D3D5;
+}
+.oui-table__tbody .oui-table__tr:last-of-type {
+  border-bottom: none;
+}
+
+.oui-table_border .oui-table__th, .oui-table_border .oui-table__td {
+  margin-right: 0;
+  border-right: 1px solid #D1D3D5;
+}
+.oui-table_border .oui-table__th:last-of-type, .oui-table_border .oui-table__td:last-of-type {
+  border-right: none;
+}

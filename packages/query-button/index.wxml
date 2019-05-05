@@ -1,0 +1,15 @@
+<view class="query-wrap">
+    <view
+    class="query-city"
+    data-city="{{city}}"
+    bindtap="clickCity">
+        <text>{{city}}</text>
+        <image
+          src="{{imgSrc}}"
+          mode="{{mode}}"></image>
+    </view>
+    <view class="query-position">
+        <slot></slot>
+    </view>
+</view>
+  

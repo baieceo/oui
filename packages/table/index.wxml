@@ -1,0 +1,35 @@
+<!--oui/packages/table/index.wxml-->
+<view class="oui-table {{ border ? 'oui-table_border' : '' }}">
+  <view class="oui-table__thead">
+    <view class="oui-table__tr">
+      <view 
+        class="oui-table__th" 
+        style="width: {{ item.width }}; text-align: {{ item.align }}"
+        wx:for="{{ columnsData }}"
+        wx:key="{{ index }}"
+      >
+        <view class="oui-table__cell {{ item.ellipsis ? 'oui-table__cell_ellipsis' : '' }}">{{ item.title }}</view>
+        </view>
+    </view>
+  </view>
+  <view class="oui-table__tbody">
+    <view 
+      class="oui-table__tr"
+      wx:for="{{ data }}"
+      wx:for-item="dataItem"
+      wx:for-index="dataIndex"
+      wx:key="{{ dataIndex }}"
+    >
+      <view 
+        class="oui-table__td" 
+        style="width: {{ columnItem.width }}; text-align: {{ columnItem.align }}"
+        wx:for="{{ columnsData }}"
+        wx:for-item="columnItem"
+        wx:for-index="columnIndex"
+        wx:key="{{ columnIndex }}"
+      >
+        <view class="oui-table__cell {{ columnItem.ellipsis ? 'oui-table__cell_ellipsis' : '' }}">{{ dataItem[columnItem.key] }}</view>
+        </view>
+    </view>
+  </view>
+</view>

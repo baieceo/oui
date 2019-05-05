@@ -1,0 +1,41 @@
+<!--oui/packages/color-picker/index.wxml-->
+<view class="oui-color-picker">
+  <view class="oui-color-picker__wrapper" bind:tap="handleColorPopupOpen">
+    <view class="oui-color-picker__value" wx:if="{{ value }}">{{ colorName }}</view>
+    <view class="oui-color-picker__placeholder" wx:else>{{ placeholder }}</view>
+  </view>
+
+  <o-popup 
+    value="{{ visible }}"
+    title="{{ title }}"
+    bind:visible-change="handleVisibleChange"
+  >
+    <view slot="content">
+      <view class="oui-color-picker-popup">
+        <view class="oui-color-picker-popup__body">
+          <view class="oui-color-picker-popup__list">
+            <view 
+              class="oui-color-picker-popup__item" 
+              wx:for="{{ colors }}" 
+              wx:key="{{ item.value }}"
+            >
+              <view 
+                class="oui-color-picker-popup__button"
+                style="color: {{ item.style.color }}; background: {{ item.style.background }}; border-color: {{ item.style.borderColor }}"
+                data-value="{{ item.value }}"
+                data-title="{{ item.title }}"
+                bind:tap="handleItemClick"
+              >
+                {{ item.title }}
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </o-popup>
+</view>
+
+
+
+

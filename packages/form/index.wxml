@@ -1,0 +1,6 @@
+<!--oui/packages/form/index.wxml-->
+<view class="oui-form">
+  <view class="oui-form__body" bind:input="input">
+    <slot></slot>
+  </view>
+</view>

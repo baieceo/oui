@@ -1,0 +1,29 @@
+/* oui/packages/panel/index.wxss */
+.oui-panel {
+  padding: 0 0 16rpx 0;
+  width: 640rpx;
+  margin: 0 auto;
+}
+.oui-panel__header {
+  display: flex;
+  align-items: flex-start;
+  padding: 16rpx 0;
+  line-height: 44rpx;
+}
+.oui-panel__header-content {
+  flex: 1;
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #2E2E2E;
+}
+.oui-panel__header-extra {
+  font-size: 24rpx;
+  color: #BDBDBD;
+}
+.oui-panel__footer {
+  padding: 32rpx 0 16rpx 0;
+  font-size: 24rpx;
+  color: #BDBDBD;
+  line-height: 28rpx;
+  text-align: center;
+}

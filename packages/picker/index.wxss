@@ -1,0 +1,10 @@
+/* oui/packages/picker/index.wxss */
+.oui-picker__body {
+  font-size: 30rpx;
+}
+.oui-picker__label {
+  color: #333;
+}
+.oui-picker__placeholder {
+  color: #979797;
+}

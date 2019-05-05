@@ -1,0 +1,36 @@
+/* oui/packages/color-picker/index.wxss */
+.oui-color-picker-popup__list { 
+  display: flex; 
+  flex-flow: row wrap;
+  margin-right: -16rpx;
+  margin-bottom: -16rpx;
+}
+.oui-color-picker-popup__item {
+  box-sizing: border-box;
+  width: 25%;
+  padding-right: 16rpx;
+  padding-bottom: 16rpx;
+}
+.oui-color-picker-popup__button {
+  display: flex;
+  height: 80rpx;
+  border-radius: 4rpx;
+  align-items: center;
+  justify-content: center;
+  border-width: 1rpx;
+  border-style: solid;
+}
+.oui-color-picker__wrapper {
+  font-size: 30rpx;
+}
+.oui-color-picker__value {
+  color: #333;
+}
+.oui-color-picker__placeholder {
+  color: #979797;
+}
+.oui-color-picker {
+  position: relative;
+  width: 100;
+  height: 100%;
+}

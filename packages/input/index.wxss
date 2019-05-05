@@ -1,0 +1,5 @@
+/* oui/packages/input/index.wxss */
+.oui-input {
+  font-size: 30rpx;
+  color: #333333;
+}

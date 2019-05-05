@@ -1,0 +1,15 @@
+<!--oui/packages/panel/index.wxml-->
+<view class="oui-panel o-class" style="width: {{ width }}">
+    <view class="oui-panel__header">
+      <view class="oui-panel__header-content">
+        {{ title }}
+      </view>
+      <view class="oui-panel__header-extra" wx:if="{{ extra }}">{{ extra }}</view>
+    </view>
+    <view class="oui-panel__body">
+      <slot name="content"></slot>
+    </view>
+    <view class="oui-panel__footer">
+      <slot name="footer"></slot>
+    </view>
+</view>

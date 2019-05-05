@@ -1,0 +1,24 @@
+<!--oui/packages/popup/index.wxml-->
+<view wx:if="{{ visible }}" class="oui-popup {{ value ? 'oui-popup_animate-in' : 'oui-popup_animate-out' }}">
+  <view class="oui-popup__mask" style="animation-duration: {{ duration + 's' }}" wx:if="{{ mask }}" bind:tap="handleMaskClick"></view>
+  <view class="oui-popup__wrapper {{ 'oui-popup__wrapper_' + position }}" style="animation-duration: {{ duration + 's' }}">
+    <view class="oui-popup__header">
+      <block wx:if="{{ title }}">
+        <view class="oui-popup__header-title">{{ title }}</view>
+      </block>
+      <block wx:else>
+        <slot name="header"></slot>
+      </block>
+      <view class="oui-popup__header-close" wx:if="{{ closable }}" bind:tap="handleClose"></view>
+    </view>
+    <view class="oui-popup__body">
+      <slot></slot>
+      <view class="oui-popup__content">
+        <slot name="content">内容</slot>
+      </view>
+    </view>
+    <view class="oui-popup__footer">
+      <slot name="footer"></slot>
+    </view>
+  </view>
+</view>

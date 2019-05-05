@@ -1,0 +1,35 @@
+<!--oui/packages/input/index.wxml-->
+<view class="oui-input">
+  <view class="oui-input__body">
+     <textarea
+        wx:if="{{ type === 'textarea' }}"
+        placeholder-style="color: {{ placeholderColor }}"
+        auto-height
+        disabled="{{ disabled }}"
+        focus="{{ autofocus }}"
+        value="{{ value }}"
+        placeholder="{{ placeholder }}"
+        maxlength="{{ maxlength }}"
+        class="oui-input__text {{ right ? 'oui-input__text_right' : '' }}"
+        placeholder-class="oui-input__placeholder"
+        bindinput="handleInputChange"
+        bindfocus="handleInputFocus"
+        bindblur="handleInputBlur"
+    ></textarea>
+    <input
+        wx:else
+        type="{{ type }}"
+        placeholder-style="color: {{ placeholderColor }}"
+        disabled="{{ disabled }}"
+        focus="{{ autofocus }}"
+        value="{{ value }}"
+        placeholder="{{ placeholder }}"
+        maxlength="{{ maxlength }}"
+        class="oui-input__text {{ right ? 'oui-input__text_right' : '' }}"
+        placeholder-class="oui-input__placeholder"
+        bindinput="handleInputChange"
+        bindfocus="handleInputFocus"
+        bindblur="handleInputBlur"
+    />
+  </view>
+</view>

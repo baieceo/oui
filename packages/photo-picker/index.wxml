@@ -1,0 +1,18 @@
+<!--oui/packages/photo-picker/index.wxml-->
+<view class="oui-photo-picker">
+  <view 
+    class="oui-photo-picker__body" 
+    style="background-image: url({{ image }}); width: {{ width }}; height: {{ height }}"
+    bindtap="handleClickPick"
+  >
+    <view class="oui-photo-picker__loading" wx:if="{{ loading }}">
+      <slot name="loading"></slot>
+    </view>
+    <view 
+      class="oui-photo-picker__button"
+      wx:if="{{ button }}"
+    >{{ buttonText }}</view>
+  </view>
+  <view>{{ res.tempFilePaths }}</view>
+</view>
+

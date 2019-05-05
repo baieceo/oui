@@ -1,0 +1,18 @@
+<!--oui/packages/date-picker/index.wxml-->
+<view class="oui-picker-date">
+  <picker
+    mode="date"
+    value="{{ date }}"
+    start="{{ startDate }}"
+    end="{{ endDate }}"
+    disabled="{{ disabled }}"
+    bindchange="bindDateChange"
+  >
+    <view class="oui-picker-date__value" wx:if="{{ date }}">
+      {{ date }}
+    </view>
+    <view class="oui-picker-date__placeholder" wx:else>
+      {{ placeholder }}
+    </view>
+  </picker>
+</view>

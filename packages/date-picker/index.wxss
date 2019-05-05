@@ -1,0 +1,16 @@
+/* oui/packages/date-picker/index.wxss */
+.oui-date-picker {
+  
+}
+
+.oui-picker-date__value, .oui-picker-date__placeholder {
+  font-size: 30rpx;
+}
+
+.oui-picker-date__value {
+  color: #333333;
+}
+
+.oui-picker-date__placeholder {
+  color: #979797;
+}

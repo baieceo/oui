@@ -1,0 +1,5 @@
+<!--oui/packages/icon/index.wxml-->
+<view 
+  class="oui-icon {{ type === '' ? '' : 'oui-icon__' +  type }} {{ custom }}" 
+  style="font-size: {{ size }}px; {{ color ? 'color:' + color : '' }}"></view>
+

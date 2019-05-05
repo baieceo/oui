@@ -1,0 +1,25 @@
+<!--oui/packages/button/index.wxml-->
+<button
+    class="oui-btn {{ 'oui-btn_' + type }} {{ 'oui-btn_' + size }} {{ 'oui-btn_' + shape }} {{ long ? 'oui-btn_long' : '' }} {{ inline ? 'oui-btn_inline' : '' }} {{ disabled ? 'oui-btn_disabled' : '' }} {{ loading ? 'oui-btn_loading' : '' }}"
+    hover-class="oui-btn_hover"
+    bindtap="handleTap"
+    open-type="{{ openType }}"
+    app-parameter="{{ appParameter }}"
+    hover-stop-propagation="{{ hoverStopPropagation }}"
+    hover-start-time="{{ hoverStartTime }}"
+    hover-stay-time="{{ hoverStayTime }}"
+    session-from="{{ sessionFrom }}"
+    send-message-title="{{ sendMessageTitle }}"
+    send-message-path="{{ sendMessagePath }}"
+    send-message-img="{{ sendMessageImg }}"
+    show-message-card="{{ showMessageCard }}"
+    bindcontact="bindcontact"
+    bindgetuserinfo="bindgetuserinfo"
+    bindgetphonenumber="bindgetphonenumber"
+    binderror="binderror"
+    plain="true"
+    form-type="formType"
+>
+  <view class="oui-btn__loading-inner" wx:if="{{ loading }}"></view>
+  <slot></slot>
+</button>

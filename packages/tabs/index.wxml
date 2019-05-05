@@ -1,0 +1,17 @@
+<!--oui/packages/tabs/tabs/index.wxml-->
+<view class="oui-tabs">
+  <view class="oui-tabs__bar">
+    <view class="oui-tabs__nav">
+      <view
+        class="oui-tabs__tab {{ current === item.key ? 'oui-tabs__tab_active' : '' }}" 
+        wx:for="{{ tabs }}"
+        wx:key="{{ index }}"
+        data-key="{{ item.key }}"
+        bindtap="handleClickItem"
+      >{{item.title}}</view>
+    </view>
+  </view>
+  <view class="oui-tabs__content">
+    <slot></slot>
+  </view>
+</view>
