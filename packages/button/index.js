@@ -24,6 +24,10 @@ Component({
       type: String,
       value: 'square'
     },
+    ghost: {
+      type: Boolean,
+      value: false
+    },
     disabled: {
       type: Boolean,
       value: false,
