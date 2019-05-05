@@ -1,5 +1,5 @@
 <!--oui/packages/panel/index.wxml-->
-<view class="oui-panel o-class" style="width: {{ width }}">
+<view class="oui-panel oui-class o-class" style="width: {{ width }}">
     <view class="oui-panel__header">
       <view class="oui-panel__header-content">
         {{ title }}

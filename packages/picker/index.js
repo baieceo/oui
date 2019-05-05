@@ -2,6 +2,7 @@
 const { emitter } = require('../base/events.js')
 
 Component({
+  externalClasses: ['o-class', 'oui-class'],
   behaviors: ['wx://form-field'],
   /**
    * 组件的属性列表

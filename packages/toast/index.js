@@ -13,6 +13,7 @@ const default_data = {
 let timer = null
 
 Component({
+  externalClasses: ['o-class', 'oui-class'],
   /**
    * 组件的属性列表
    */

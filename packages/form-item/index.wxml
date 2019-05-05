@@ -1,5 +1,5 @@
 <!--oui/packages/form-item/index.wxml-->
-<view class="oui-form-item {{ index === 0 ? 'oui-form-item_first' : '' }} {{ type ? 'oui-form-item_' + type : '' }}">
+<view class="oui-form-item {{ index === 0 ? 'oui-form-item_first' : '' }} {{ type ? 'oui-form-item_' + type : '' }} oui-class o-class">
   <view 
     class="oui-form-item__header"
     style="width: {{ labelWidth ? labelWidth : labelWidthDefault }}; text-align: {{ labelPosition }}"

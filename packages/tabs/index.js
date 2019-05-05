@@ -1,5 +1,6 @@
 // oui/packages/tabs/tabs/index.js
 Component({
+  externalClasses: ['o-class', 'oui-class'],
   options: {
     styleIsolation: 'isolated'
   },

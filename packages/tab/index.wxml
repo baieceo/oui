@@ -1,4 +1,4 @@
 <!--oui/packages/tab-pane/index.wxml-->
-<view class="oui-tabs__tab-pane {{ current ? 'oui-tabs__tab-pane_active' : '' }}" wx:if="{{ current }}">
+<view class="oui-tabs__tab-pane {{ current ? 'oui-tabs__tab-pane_active' : '' }} oui-class o-class" wx:if="{{ current }}">
   <slot></slot>
 </view>

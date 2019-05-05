@@ -1,5 +1,5 @@
 <!--oui/packages/form/index.wxml-->
-<view class="oui-form">
+<view class="oui-form oui-class o-class">
   <view class="oui-form__body" bind:input="input">
     <slot></slot>
   </view>

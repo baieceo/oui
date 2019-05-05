@@ -1,5 +1,5 @@
 <!--oui/packages/input/index.wxml-->
-<view class="oui-input">
+<view class="oui-input oui-class o-class">
   <view class="oui-input__body">
      <textarea
         wx:if="{{ type === 'textarea' }}"

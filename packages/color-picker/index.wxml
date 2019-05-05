@@ -1,5 +1,5 @@
 <!--oui/packages/color-picker/index.wxml-->
-<view class="oui-color-picker">
+<view class="oui-color-picker oui-class o-class">
   <view class="oui-color-picker__wrapper" bind:tap="handleColorPopupOpen">
     <view class="oui-color-picker__value" wx:if="{{ value }}">{{ colorName }}</view>
     <view class="oui-color-picker__placeholder" wx:else>{{ placeholder }}</view>

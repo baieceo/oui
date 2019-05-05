@@ -1,5 +1,6 @@
 // oui/packages/photo-picker/index.js
 Component({
+  externalClasses: ['o-class', 'oui-class'],
   behaviors: ['wx://form-field'],
   options: {
     styleIsolation: 'isolated',

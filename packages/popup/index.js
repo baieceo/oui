@@ -1,5 +1,6 @@
 // oui/packages/popup/index.js
 Component({
+  externalClasses: ['o-class', 'oui-class'],
   options: {
     multipleSlots: true,
     styleIsolation: 'isolated'

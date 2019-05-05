@@ -85,6 +85,7 @@ const default_colors = [
 
 
 Component({
+  externalClasses: ['o-class', 'oui-class'],
   /**
    * 组件的属性列表
    */

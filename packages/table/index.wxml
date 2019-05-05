@@ -1,5 +1,5 @@
 <!--oui/packages/table/index.wxml-->
-<view class="oui-table {{ border ? 'oui-table_border' : '' }}">
+<view class="oui-table {{ border ? 'oui-table_border' : '' }} oui-class o-class">
   <view class="oui-table__thead">
     <view class="oui-table__tr">
       <view 

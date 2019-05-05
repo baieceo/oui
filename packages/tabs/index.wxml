@@ -1,5 +1,5 @@
 <!--oui/packages/tabs/tabs/index.wxml-->
-<view class="oui-tabs">
+<view class="oui-tabs oui-class o-class">
   <view class="oui-tabs__bar">
     <view class="oui-tabs__nav">
       <view

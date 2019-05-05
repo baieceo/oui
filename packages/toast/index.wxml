@@ -1,6 +1,6 @@
 <!--oui/packages/toast/index.wxml-->
 <view class="oui-toast__mask" wx:if="{{ visible && mask }}" bindtap="handleHide"></view>
-<view class="oui-toast" wx:if="{{ visible }}">
+<view class="oui-toast oui-class o-class" wx:if="{{ visible }}">
     <block wx:if="{{ type !== 'default' }}">
         <view class="oui-toast__type">
             <o-icon size="{{ size }}" class="oui-toast__icon" type="success" wx:if="{{ type === 'success' }}"></o-icon>

@@ -1,5 +1,5 @@
 <!--oui/packages/icon/index.wxml-->
 <view 
-  class="oui-icon {{ type === '' ? '' : 'oui-icon__' +  type }} {{ custom }}" 
+  class="oui-icon {{ type === '' ? '' : 'oui-icon__' +  type }} {{ custom }} oui-class o-class" 
   style="font-size: {{ size }}px; {{ color ? 'color:' + color : '' }}"></view>
 

@@ -1,5 +1,6 @@
 // oui/packages/date-picker/index.js
 Component({
+  externalClasses: ['o-class', 'oui-class'],
   behaviors: ['wx://form-field'],
   /**
    * 组件的属性列表
