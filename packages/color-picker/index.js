@@ -114,6 +114,10 @@ Component({
     placeholder: {
       type: String,
       value: '请选择'
+    },
+    disabled: {
+      type: Boolean,
+      value: false
     }
   },
 
@@ -144,6 +148,8 @@ Component({
     },
     // 打开弹层
     handleColorPopupOpen () {
+      if (this.data.disabled) return false
+      
       this.changePopupStatus(true)
     },
     // 关闭弹层

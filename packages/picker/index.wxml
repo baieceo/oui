@@ -1,6 +1,6 @@
 <!--oui/packages/picker/index.wxml-->
 <view class="oui-picker oui-class o-class">
-  <view class="oui-picker__body" bind:tap="handleItemClick">
+  <view class="oui-picker__body {{ disabled ? 'oui-picker__body_disabled' : '' }}" bind:tap="handleItemClick">
     <view class="oui-picker__label" wx:if="{{ value }}">{{ label }}</view>
     <view class="oui-picker__placeholder" wx:else>{{ placeholder }}</view>
   </view>

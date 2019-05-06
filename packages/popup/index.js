@@ -86,7 +86,7 @@ Component({
     handleClose () {
       this.changeValue(false)
     },
-    changeVisible (visible) {
+    changeVisible(visible) {
       let timer = null
       
       if (visible) {

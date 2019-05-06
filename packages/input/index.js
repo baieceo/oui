@@ -54,7 +54,7 @@ Component({
       
       this.setData({ value })
 
-      this.triggerEvent('change', event)
+      this.triggerEvent('change', event.detail)
       
       // 用于双向绑定
       this.triggerEvent(
@@ -83,5 +83,8 @@ Component({
     handleInputBlur (ev) {
       this.triggerEvent('blur', ev)
     }
+  },
+  ready () {
+    this.triggerEvent('change', { value: this.data.value })
   }
 })

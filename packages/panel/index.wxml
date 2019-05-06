@@ -7,6 +7,7 @@
       <view class="oui-panel__header-extra" wx:if="{{ extra }}">{{ extra }}</view>
     </view>
     <view class="oui-panel__body">
+      <slot></slot>
       <slot name="content"></slot>
     </view>
     <view class="oui-panel__footer">

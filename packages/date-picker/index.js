@@ -66,6 +66,12 @@ Component({
       )
 
       this.triggerEvent(
+        'change',
+        { event, value, source: 'date-picker' },
+        { bubbles: true, composed: true }
+      )
+
+      this.triggerEvent(
         'update',
         { event, value, source: 'date-picker' },
         { bubbles: true, composed: true }

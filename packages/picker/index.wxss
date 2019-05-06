@@ -8,3 +8,6 @@
 .oui-picker__placeholder {
   color: #979797;
 }
+.oui-picker__body_disabled .oui-picker__label, .oui-picker__body_disabled .oui-picker__placeholder {
+  color: #999;
+}

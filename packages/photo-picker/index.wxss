@@ -40,7 +40,7 @@
   right: 0;
   bottom: 0;
   z-index: 1;
-  background: rgba(0, 0, 0, .5);
+  background: rgba(255, 255, 255, .9);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -62,4 +62,25 @@
   animation: btn-spin 0.8s linear;
   animation-iteration-count: infinite;
   margin-bottom: .5em;
+}
+
+@keyframes btn-spin {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.oui-photo-picker_disabled {
+  position: relative;
+}
+.oui-photo-picker_disabled .oui-photo-picker__mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, .5);
 }

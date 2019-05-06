@@ -7,13 +7,13 @@ Component({
   relations: {
     '../form-item/index': {
       type: 'child',
-      linked (target) {
+      linked(target) {
         this.changeItem(target)
       },
-      linkChanged (target) {
+      linkChanged(target) {
         this.changeItem(target)
       },
-      unlinked (target) {
+      unlinked(target) {
         this.changeItem(target)
       }
     }
@@ -55,6 +55,10 @@ Component({
     validateType: {
       type: String,
       value: 'boolean'
+    },
+    changeType: {
+      type: String,
+      value: 'model'
     }
   },
 
@@ -70,7 +74,7 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    changeItem (target) {
+    changeItem(target) {
       let me = this
       let nodes = this.getRelationNodes('../form-item/index')
 
@@ -87,9 +91,9 @@ Component({
         }
       })
     },
-    emitEvent (key) {
+    emitEvent(key) {
     },
-    resetFields () {
+    resetFields() {
       this.changeData(this.data.initData)
 
       this.input({
@@ -104,12 +108,12 @@ Component({
         type: 'update'
       })
     },
-    changeData (value) {
+    changeData(value) {
       this.setData({
         data: value
       })
     },
-    input (event) {
+    input(event) {
       let model = this.data.data
       const { detail = {} } = event
       const { value = '' } = detail
@@ -117,8 +121,8 @@ Component({
       const { modelName, valueName } = this.data
 
       if (
-        prop && event.type === 'sync' || 
-        prop && event.type === 'input' || 
+        prop && event.type === 'sync' ||
+        prop && event.type === 'input' ||
         prop && event.type === 'update'
       ) {
         model[prop] = value
@@ -148,6 +152,31 @@ Component({
         { bubbles: true, composed: true }
       ]
 
+      if (this.data.changeType === 'model') {
+        if (modelName && !prop) {
+          this.triggerEvent(
+            'change',
+            {
+              type: 'model',
+              name: modelName,
+              value: model
+            }
+          )
+        }
+      } else if (this.data.changeType === 'prop') {
+        if (modelName && prop) {
+          this.triggerEvent(
+            'change',
+            {
+              type: 'prop',
+              model: modelName,
+              name: prop,
+              value: value
+            }
+          )
+        }
+      }
+
       this.triggerEvent(
         'sync',
         ...options
@@ -164,7 +193,7 @@ Component({
       )
     },
     // 校验所有字段
-    validate () {
+    validate() {
       const me = this
       const rules = this.data.rules
       const validateType = this.data.validateType
@@ -192,7 +221,7 @@ Component({
       }
     },
     // 校验单独字段
-    validateField (key) {
+    validateField(key) {
       const model = this.data.data
       const data = model[key]
       const rules = this.data.rules[key]
@@ -209,7 +238,7 @@ Component({
         if (rule.validator) {
           validate = rule.validator(rule, data)
         }
-        
+
         // 字符串验证
         if (rule.type === 'string') {
           if (rule.min) {
@@ -239,7 +268,7 @@ Component({
             validate = (data + '').length > rule.maxlength
           }
         }
-        
+
         // 数组验证
         if (rule.type === 'array') {
           if (rule.min) {
@@ -288,7 +317,7 @@ Component({
       }
     }
   },
-  ready () {
+  ready() {
     const initData = Object.assign({}, this.data.data)
 
     this.setData({

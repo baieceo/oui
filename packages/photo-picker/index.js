@@ -41,6 +41,10 @@ Component({
     height: {
       type: String,
       value: '380rpx'
+    },
+    disabled: {
+      type: Boolean,
+      value: false
     }
   },
 
@@ -55,7 +59,7 @@ Component({
    */
   methods: {
     handleClickPick () {
-      if (this.data.loading) return false
+      if (this.data.loading || this.data.disabled) return false
 
       const me = this
 
@@ -80,6 +84,7 @@ Component({
           const myEventOption = {}  // 触发事件的选项
 
           me.triggerEvent('success', myEventDetail, myEventOption)
+          me.triggerEvent('change', myEventDetail, myEventOption)
         }
       })
     }

@@ -7,13 +7,13 @@ Component({
   relations: {
     '../form/index': {
       type: 'parent',
-      linked (target) {
+      linked(target) {
         this.change()
       },
-      linkChanged (target) {
+      linkChanged(target) {
         this.change()
       },
-      unlinked (target) {
+      unlinked(target) {
         this.change()
       }
     }
@@ -56,17 +56,17 @@ Component({
    * 组件的初始数据
    */
   data: {
-    labelWidthDefault: '110px'
+    labelWidthDefault: '110rpx'
   },
 
   /**
    * 组件的方法列表
    */
   methods: {
-    change (event) {
+    change(event) {
 
     },
-    handleInput (event) {
+    handleInput(event) {
       event = event.detail.event
 
       const { detail = {} } = event

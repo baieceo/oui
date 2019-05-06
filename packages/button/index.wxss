@@ -1,4 +1,4 @@
-/* oui/packages/button/index.wxss */
+ /* oui/packages/button/index.wxss */
 .oui-btn {
   position: relative;
   text-align: center;

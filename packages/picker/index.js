@@ -15,6 +15,14 @@ Component({
     label: {
       type: String,
       value: ''
+    },
+    value: {
+      type: String,
+      value: ''
+    },
+    disabled: {
+      type: Boolean,
+      value: false
     }
   },
 
@@ -30,7 +38,14 @@ Component({
    */
   methods: {
     handleItemClick (event) {
-      // emitter(this, ['tap'], event)
+      if (this.data.disabled) return false
+      
+      let options = Object.assign({}, event)
+
+      options.label = this.data.label
+      options.value = this.data.value
+
+      emitter(this, ['click'], options)
     }
   }
 })

@@ -14,8 +14,8 @@ Component({
       value: ''
     },
     size: {
-      type: Number,
-      value: 14
+      type: String,
+      value: '28rpx'
     },
     color: {
       type: String,

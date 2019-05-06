@@ -4,7 +4,7 @@ const default_data = {
   content: '',
   icon: '',
   image: '',
-  size: 100,
+  size: '100rpx',
   duration: 2,
   mask: true,
   type: 'default'  // default || success || warning || error || loading
@@ -52,7 +52,7 @@ Component({
         }, delay)
       }
     },
-    handleHide() {
+    handleHide () {
       this.setData({
         ...default_data
       })

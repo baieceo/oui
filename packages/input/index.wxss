@@ -3,3 +3,7 @@
   font-size: 30rpx;
   color: #333333;
 }
+
+.oui-input__text_disabled {
+  color: #999;
+}
